@@ -1,0 +1,18 @@
+{
+  "name": "my-project",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "format": "yarn prettier --write ."
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.9.1",
+    "parcel": "^2.9.1",
+    "prettier": "2.8.8"
+  },
+  "dependencies": {
+    "postcss": "^8.4.24",
+    "sass": "^1.62.1",
+    "tailwindcss": "^3.3.2"
+  }
+}
