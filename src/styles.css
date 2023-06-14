@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 .butt {
-    @apply border borde-solid border-brown-600 px-4 py-2 rounded-md hover:bg-brown-600 hover:text-white transition-all duration-300;
+    @apply border border-solid border-gray-600 px-4 py-2 rounded-md hover:bg-gray-600 hover:text-white transition-all duration-300;
     
 }
