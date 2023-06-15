@@ -6,3 +6,8 @@
     @apply border border-solid border-gray-600 px-4 py-2 rounded-md hover:bg-gray-600 hover:text-white transition-all duration-300;
     
 }
+
+.items_text{
+    flex-grow: 1;
+    justify-content: space-between;
+}
