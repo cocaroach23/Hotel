@@ -11,3 +11,8 @@
     flex-grow: 1;
     justify-content: space-between;
 }
+
+.card_hotel{
+    border: 1px solid purple;
+    border-radius: 5px;
+}
