@@ -63,6 +63,10 @@ async function init() {         //
     document.getElementById('rating').addEventListener('click', () => filterByCity(tours, 'rating'))
 }
 
+function openModal(){                                   //открытие модального окна
+    addModal.style.display = "flex"
+}
+
 init()
 
 // сортировки по фильтрам 
