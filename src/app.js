@@ -13,7 +13,7 @@ function renderTours(tours) {
             container.innerHTML +=`
                 <div class="card_hotel">
                     <div>
-                        <p class="city">${tour.city}</p>
+                        <p class="city">${tour.city !== null ? tour.city : ''}</p>
                         <p class="country">${tour.country}</p>
                         <p class="end_time">${tour.endTime}</p>
                         <h1 class="name_hotel">${tour.hotelName}</h1>
@@ -23,6 +23,7 @@ function renderTours(tours) {
                         <p class="price">${tour.price}</p>
                         <p class="rating">${tour.rating}</p>
                         <p class="start_time">${tour.startTime}</p>
+                        <button class="border-gray-400 rounded-lg p-5px">Забронировать</button>
                     </div>
             `
         })   
@@ -59,7 +60,7 @@ async function init() {         //
     document.getElementById('maldives').addEventListener('click', () => filterByCountry(tours, 'Мальдивы'))
     document.getElementById('all').addEventListener('click', () => filterByCountry(tours))
 
-    document.getElementById('five_stars').addEventListener('click', () => filterByCity(tours, '5 звёзд'))
+    document.getElementById('rating').addEventListener('click', () => filterByCity(tours, 'rating'))
 }
 
 init()
