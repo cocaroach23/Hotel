@@ -1,11 +1,10 @@
 const container = document.getElementById("container")
 
-async function appealServ() { 
+async function loadTours() { 
     const response = await fetch( "https://www.bit-by-bit.ru/api/student-projects/tours")
     const tours = await response.json()
 
-    renderTours(tours)
-    console.log(tours)
+    return tours
 }
 
 function renderTours(tours) {
@@ -19,7 +18,7 @@ function renderTours(tours) {
                         <p class="end_time">${tour.endTime}</p>
                         <h1 class="name_hotel">${tour.hotelName}</h1>
                     </div>
-                    <img clas="image" src="${tour.image} alt="">
+                    <img clas="image" src="${tour.image}" alt="">
                     <div>
                         <p class="price">${tour.price}</p>
                         <p class="rating">${tour.rating}</p>
@@ -64,5 +63,5 @@ async function init() {         //
 }
 
 init()
-appealServ()
+
 // сортировки по фильтрам 
