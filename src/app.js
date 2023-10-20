@@ -63,9 +63,30 @@ async function init() {         //
     document.getElementById('rating').addEventListener('click', () => filterByCity(tours, 'rating'))
 }
 
+const addModal = document.getElementById("add-modal")               //сделано по примеру проекта книжная полка
+const openModalButt = document.getElementById("open-modal-butt")
+const closeModalButt = document.getElementById("close-modal-butt")
+
+
 function openModal(){                                   //открытие модального окна
     addModal.style.display = "flex"
 }
+
+function closeModal(){
+    addModal.style.display = "none"
+}
+
+closeModalButt.addEventListener("click", closeModal)
+openModalButt.addEventListener("click", openModal)
+
+/*function clearForm(){                                             //очистка полей в модальном окне
+    document.getElementById("name").value= ""
+    document.getElementById("lastName").value= ""
+    document.getElementById("nemberPhone").value= ""
+    document.getElementById("dateBirth").value= ""
+    document.getElementById("email").value= ""
+    document.getElementById("regAddress").value= ""
+}*/
 
 init()
 
