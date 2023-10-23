@@ -66,6 +66,8 @@ async function init() {         //
 const addModal = document.getElementById("add-modal")               //сделано по примеру проекта книжная полка
 const openModalButt = document.getElementById("open-modal-butt")
 const closeModalButt = document.getElementById("close-modal-butt")
+const changeModal = document.getElementById("change-modal")
+const closeModalButtChange = document.getElementById("close-change-butt")
 
 
 function openModal(){                                   //открытие модального окна
@@ -76,13 +78,23 @@ function closeModal(){
     addModal.style.display = "none"
 }
 
+function closeChangeModal(){
+    changeModal.style.display = "none"
+  }
+
+  function openChangeModal(){
+    changeModal.style.display = "flex"
+  }
+
+
+closeModalButtChange.addEventListener("click", closeChangeModal)
 closeModalButt.addEventListener("click", closeModal)
 openModalButt.addEventListener("click", openModal)
 
 /*function clearForm(){                                             //очистка полей в модальном окне
     document.getElementById("name").value= ""
     document.getElementById("lastName").value= ""
-    document.getElementById("nemberPhone").value= ""
+    document.getElementById("numberPhone").value= ""
     document.getElementById("dateBirth").value= ""
     document.getElementById("email").value= ""
     document.getElementById("regAddress").value= ""
