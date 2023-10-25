@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-    <script type="module" src="/src/app.js"></script>
-    
-    
-  </head>
-  <body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/src/styles.css" />
+        <script type="module" src="/src/app.js"></script>
+    </head>
+    <body>
+        <div class="bg-gray-50">
+            <div class="max-w-6xl mx-auto py-16 px-12 lg:px-0">
+                <div class="flex justify-end gap-4">
+                    <button id="thailand" class="butt">ТАЙЛАНД</button>
+                    <button id="maldives" class="butt">МАЛЬДИВЫ</button>
+                    <button id="indonesia" class="butt">ИНДОНЕЗИЯ</button>
+                    <button id="all" class="butt">ВСЕ СТРАНЫ</button>
 
-    <div class="bg-gray-50">
-      <div class="max-w-6xl mx-auto py-16 px-12 lg:px-0">
-        
-        <div class="flex justify-end gap-4">
-          <button id="thailand" class="butt">ТАЙЛАНД</button>
-          <button id="maldives" class="butt">МАЛЬДИВЫ</button>
-          <button id="indonesia" class="butt">ИНДОНЕЗИЯ</button>
-          <button id="all" class="butt">ВСЕ СТРАНЫ</button>
+                    <button id="five_stars" class="butt">5 звёзд</button>
 
-          <button id="five_stars" class="butt"> 5 звёзд</button>
+                    <button class="butt">Другие отели</button>
+                    <button class="butt">Добавить отель</button>
+                </div>
 
-          <button class="butt">Другие отели</button>
-          <button class="butt">Добавить отель</button>
+                <div class="text-center">
+                    <h1 class="text-5xl font-bold text-gray-900">
+                        Отели Турции
+                    </h1>
+                    <p class="text-gray-500 text-xl m-4">
+                        Спецпердложения по отелям Турции
+                    </p>
+                </div>
+            </div>
 
-        </div>
+            <div
+                id="container"
+                class="flex flex-wrap gap-2.5 max-w-5xl mx-auto"
+            >
+                <button id="open-modal-butt">Забронировать</button>
 
-        <div class="text-center">
-          <h1 class="text-5xl font-bold text-gray-900">Отели Турции</h1>
-          <p class="text-gray-500 text-xl m-4">Спецпердложения по отелям Турции</p>
-        </div>
+                <!--<div class="max-w-7xl m-auto mt-12 gap-8 grid grid-cols-1 justify-around sm:grid-cols-2 lg:grid-cols-3">-->
 
-      </div>
-
-
-      <div id="container" class="flex flex-wrap gap-2.5 max-w-5xl mx-auto ">
-      
-      <button id="open-modal-butt">Забронировать</button>
-      <div class="add-modal" id="add-modal">
-        <button id="addHotel">Забронировать</button>
-        <button id="close-midal-butt">Закрыть</button>
-      </div>
-        
-      <!--<div class="max-w-7xl m-auto mt-12 gap-8 grid grid-cols-1 justify-around sm:grid-cols-2 lg:grid-cols-3">-->
-
-        <!--<div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <!--<div class="bg-white shadow-lg rounded-lg overflow-hidden">
           <img src="/src/img/pool-outdoor.jpg" alt="pool-outdoor" class="h-96 w-full">
         
           <div class="p-6 flex flex-col gap-8 items-baseline items_text">
@@ -74,7 +69,7 @@
         
         </div>-->
 
-       <!-- <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <!-- <div class="bg-white shadow-lg rounded-lg overflow-hidden">
           <img src="/src/img/megasaray-westbeach-antalya.jpg" alt="megasaray-westbeach-antalya" class="h-96 w-full">
         
           <div class="p-6 flex flex-col gap-8 items-baseline items_text">
@@ -102,7 +97,7 @@
         
         </div>-->
 
-        <!--<div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                <!--<div class="bg-white shadow-lg rounded-lg overflow-hidden">
           <img src="/src/img/air-view-pool.jpg" alt="air-view-pool" class="h-96 w-full">
         
           <div class="p-6 flex flex-col gap-8 items-baseline items_text">
@@ -129,58 +124,48 @@
           
         
         </div>-->
+            </div>
+        </div>
+        <div id="add-modal" class="hidden fixed bg-black border-opacity-50">
+            <div class="bg-white mx-auto flex flex-col mt-20">
+                <div class="input_items">
+                    <p class="input_text">Фамилия</p>
+                    <input id="title-change" />
+                </div>
 
-      </div>
+                <div class="input_item">
+                    <p class="input_text">Имя</p>
+                    <input id="lastName" />
+                </div>
 
-      
+                <div class="input_item">
+                    <p class="input_text">Мобильный телефон</p>
+                    <input id="numberPhone" />
+                </div>
 
+                <div class="input_item">
+                    <p class="input_text">Дата въезда</p>
+                    <input id="dateBirth" />
+                </div>
 
+                <div class="input_item">
+                    <p class="input_text">Дата выезда</p>
+                    <input id="dateBirth" />
+                </div>
 
+                <div class="input_item">
+                    <p class="input_text">Почта</p>
+                    <input id="email" />
+                </div>
 
+                <div class="input_item">
+                    <p class="input_text">Адрес регистрации</p>
+                    <input id="regAddress" />
+                </div>
 
-
-
-    </div>
-    <div id="change-modal">
-      <div class="input_items">
-        <p class="input_text">Фамилия</p>
-        <input id="title-change">
-      </div>
-
-      <div class="input_item">
-        <p class="input_text" >Имя</p>
-        <input id="lastName" />
-    </div>
-
-    <div class="input_item">
-        <p  class="input_text">Мобильный телефон</p>
-        <input id="numberPhone" />
-    </div>
-
-    <div class="input_item">
-        <p  class="input_text">Дата въезда</p>
-        <input id="dateBirth" />
-    </div>
-
-    <div class="input_item">
-      <p  class="input_text">Дата выезда</p>
-      <input id="dateBirth" />
-  </div>
-
-    <div class="input_item">
-      <p  class="input_text">Почта</p>
-      <input id="email" />
-    </div>
-
-    <div class="input_item">
-      <p  class="input_text">Адрес регистрации</p>
-      <input id="regAddress" />
-    </div>
-
-    <button id="addBookChange">Сохранить</button>
-    <button id="close-change-butt">Закртыть</button>
-
-    </div>
-
-  </body>
+                <button id="addBookChange">Сохранить</button>
+                <button id="close-modal-butt">Закртыть</button>
+            </div>
+        </div>
+    </body>
 </html>

@@ -4,15 +4,14 @@
 
 .butt {
     @apply border border-solid border-gray-600 px-4 py-2 rounded-md hover:bg-gray-600 hover:text-white transition-all duration-300;
-    
 }
 
-.items_text{
+.items_text {
     flex-grow: 1;
     justify-content: space-between;
 }
 
-.card_hotel{
+.card_hotel {
     border: 1px solid purple;
     border-radius: 5px;
 }
