@@ -89,6 +89,7 @@ async function init() {
 const addModal = document.getElementById("add-modal") //сделано по примеру проекта книжная полка
 const openModalButt = document.getElementById("open-modal-butt")
 const changeModal = document.getElementById("change-modal")
+const closeModalButt = document.getElementById("closeModalButt")
 openModalButt.addEventListener("click", openModal)
 
 function openModal(tour) {                          //открытие модального окна
