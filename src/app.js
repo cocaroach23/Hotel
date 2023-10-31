@@ -27,7 +27,7 @@ function renderTours(tours) {
                         <p class="price">${tour.price}</p>
                         <p class="rating">${tour.rating}</p>
                         <p class="start_time">${tour.startTime}</p>
-                        <button class="border-gray-400 rounded-lg p-5px" id="book-btn-${
+                        <button class="but_card border-gray-400 rounded-lg p-5px" id="book-btn-${
                             tour.id
                         }>Забронировать</button>
                     </div>
