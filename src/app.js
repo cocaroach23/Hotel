@@ -31,12 +31,13 @@ function renderTours(tours) {
                             tour.id
                         }>Забронировать</button>
                     </div>
+                </div>
             `
     })
 
     tours.forEach(function (tour) {
         document
-            .getElementById(`id="book-btn-${tour.id}`)
+            .getElementById(`book-btn-${tour.id}`)
             .addEventListener("click", () => openModal(tour))
     })
 }
