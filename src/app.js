@@ -13,8 +13,8 @@ function renderTours(tours) {
     container.innerHTML = ""
     tours.forEach(function (tour) {
         container.innerHTML += `
-                <div class="card_hotel">
-                    <div>
+                <div class="card_hotel max-w-sm">
+                    <div class="flex flex-col gap-2.5 py-0.5">
                         <p class="city">${
                             tour.city !== null ? tour.city : ""
                         }</p>
@@ -23,11 +23,11 @@ function renderTours(tours) {
                         <h1 class="name_hotel">${tour.hotelName}</h1>
                     </div>
                     <img clas="image" src="${tour.image}" alt="">
-                    <div>
+                    <div class="flex flex-col gap-2.5 py-0.5">
                         <p class="price">${tour.price}</p>
                         <p class="rating">${tour.rating}</p>
                         <p class="start_time">${tour.startTime}</p>
-                        <button class="but_card"  >Забронировать</button>
+                        <button class="but_card" >Забронировать</button>
                     </div>
                 </div>
             `
@@ -35,7 +35,7 @@ function renderTours(tours) {
 //but_card border-gray-400 rounded-lg p-5px     id="book-btn-${tour.id}
     tours.forEach(function (tour) {
         document
-            .getElementById(`book-btn-${tour.id}`)
+            .getElementById(`id-book-btn-${tour.id}`)
             .addEventListener("click", () => openModal(tour))
     })
 }
