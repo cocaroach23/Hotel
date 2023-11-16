@@ -27,7 +27,7 @@ function renderTours(tours) {
                         <p class="price">${tour.price}</p>
                         <p class="rating">${tour.rating}</p>
                         <p class="start_time">${tour.startTime}</p>
-                        <button class="but_card" >Забронировать</button>
+                        <button class="but_card" id="book-btn-${tour.id}" >Забронировать</button>
                     </div>
                 </div>
             `
@@ -35,7 +35,7 @@ function renderTours(tours) {
 //but_card border-gray-400 rounded-lg p-5px     id="book-btn-${tour.id}
     tours.forEach(function (tour) {
         document
-            .getElementById(`id-book-btn-${tour.id}`)
+            .getElementById(`book-btn-${tour.id}`)
             .addEventListener("click", () => openModal(tour))
     })
 }
@@ -86,10 +86,10 @@ async function init() {
 }
 
 const addModal = document.getElementById("add-modal") //сделано по примеру проекта книжная полка
-const openModalButt = document.getElementById("open-modal-butt")
+const openModalButt = document.getElementById("book-btn-")
 const changeModal = document.getElementById("change-modal")
 const closeModalButt = document.getElementById("closeModalButt")
-openModalButt.addEventListener("click", openModal)
+//openModalButt.addEventListener("click", openModal)
 
 function openModal(tour) {                          //открытие модального окна
 
@@ -105,7 +105,7 @@ function closeModal() {
 
 closeModalButt.addEventListener("click", closeModal)
 
-openModalButt.addEventListener("click", openModal)
+//openModalButt.addEventListener("click", openModal)
 
 function clearForm(){                                             //очистка полей в модальном окне
     document.getElementById("name").value= ""
@@ -117,5 +117,5 @@ function clearForm(){                                             //очистк
 }
 
 init()
-
+openModalButt.addEventListener("click", openModal)
 
