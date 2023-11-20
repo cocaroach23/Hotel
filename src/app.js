@@ -1,3 +1,7 @@
+import { format, differenceInDays } from 'date-fns'
+import { ru } from 'date-fns/locale'
+
+
 const container = document.getElementById("container")
 
 async function loadTours() {
@@ -10,8 +14,11 @@ async function loadTours() {
 }
 
 function renderTours(tours) {
+    
     container.innerHTML = ""
     tours.forEach(function (tour) {
+        const duration = differenceInDays(new Date(tour.endTime), new Date(tour.startTime))     
+        
         container.innerHTML += `
                 <div class="card_hotel max-w-sm">
                     <div class="flex flex-col gap-2.5 py-0.5">
@@ -19,14 +26,14 @@ function renderTours(tours) {
                             tour.city !== null ? tour.city : ""
                         }</p>
                         <p class="country">${tour.country}</p>
-                        <p class="end_time">${tour.endTime}</p>
+                        <p class="end_time">${format(new Date(tour.startTime), 'dd MMMM', {locale: ru})} - ${format(new Date(tour.endTime), 'dd MMMM', {locale: ru})}, продолжительность: ${duration} </p>  
                         <h1 class="name_hotel">${tour.hotelName}</h1>
                     </div>
                     <img clas="image" src="${tour.image}" alt="">
                     <div class="flex flex-col gap-2.5 py-0.5">
                         <p class="price">${tour.price}</p>
                         <p class="rating">${tour.rating}</p>
-                        <p class="start_time">${tour.startTime}</p>
+                        
                         <button class="but_card" id="book-btn-${tour.id}" >Забронировать</button>
                     </div>
                 </div>
