@@ -21,3 +21,22 @@
     border-radius: 10px;
     padding: 5px;
 }
+
+.input_item{
+    margin-left: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    gap: 10px;
+}
+
+.input_text{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.input-wind{
+    border: solid 1px purple;
+    border-radius: 20px;
+}
